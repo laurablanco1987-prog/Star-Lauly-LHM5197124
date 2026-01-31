@@ -8,14 +8,32 @@
 body {
     margin: 0;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background: url("https://cdn.pixabay.com/photo/2016/08/03/17/13/sky-1562750_1280.jpg") no-repeat center center fixed;
+    background: url("fondo-estrellas.jpg") no-repeat center center fixed;
     background-size: cover;
     color: white;
     text-align: center;
 }
 
+/* Marca de agua con el logo */
+body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 70%;
+    background: url("onlinestarregister.png") no-repeat center;
+    background-size: contain;
+    opacity: 0.08;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
 .overlay {
-    background: rgba(5, 10, 30, 0.85);
+    position: relative;
+    z-index: 1;
+    background: rgba(5, 10, 30, 0.88);
     min-height: 100vh;
     padding-bottom: 40px;
 }
@@ -98,6 +116,11 @@ button {
     color: #003366;
 }
 
+.star-header-logo {
+    width: 280px;
+    margin-bottom: 20px;
+}
+
 footer {
     margin-top: 60px;
     padding: 20px;
@@ -137,14 +160,16 @@ footer {
 <!-- Página de la estrella -->
 <div class="container" id="starPage" style="display:none;">
     <div class="panel">
-        <h2>STAR LAULY</h2>
+        
+        <!-- LOGO EN LUGAR DEL TEXTO -->
+        <img src="onlinestarregister.png" class="star-header-logo">
+
         <div class="coordinates">
             RA 19h 24m 18.2s | Dec −25° 17′ 09″ <br>
             Constelación: Sagitario
         </div>
 
         <div class="star-image">
-            <!-- Imagen actualizada a PNG -->
             <img src="estrella.png" alt="Estrella">
         </div>
 
