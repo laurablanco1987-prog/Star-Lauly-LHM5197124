@@ -13,7 +13,7 @@ body {
     text-align: center;
 }
 
-/* Marca de agua del logo */
+/* LOGO MARCA DE AGUA */
 body::before {
     content: "";
     position: fixed;
@@ -23,7 +23,7 @@ body::before {
     height: 75%;
     background: url("onlinestarregister.png") no-repeat center;
     background-size: contain;
-    opacity: 0.06;
+    opacity: 0.05;
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 0;
@@ -33,18 +33,54 @@ body::before {
     position: relative;
     z-index: 1;
     min-height: 100vh;
-    padding-bottom: 40px;
 }
 
+/* CABECERA NORMAL */
 header {
     padding: 40px 20px;
     border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
-.container {
-    padding: 40px 20px;
+/* CABECERA STAR CON EFECTO */
+.star-top {
+    padding: 60px 20px 30px;
+    position: relative;
+    display: inline-block;
 }
 
+.star-top img {
+    width: 420px;
+    max-width: 90%;
+    position: relative;
+    z-index: 2;
+}
+
+/* BRILLO ANIMADO */
+.star-top::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0.35) 50%,
+        rgba(255,255,255,0) 100%
+    );
+    transform: skewX(-25deg);
+    animation: shine 6s infinite;
+    z-index: 3;
+}
+
+@keyframes shine {
+    0% { left: -150%; }
+    60% { left: 150%; }
+    100% { left: 150%; }
+}
+
+/* BLOQUES BLANCOS */
 .panel {
     background: white;
     color: #111;
@@ -87,22 +123,17 @@ button {
     margin-left: 10px;
 }
 
-.star-image img {
-    width: 500px;
-    max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-}
-
 .coordinates {
     font-size: 18px;
     margin-top: 15px;
     color: #003366;
 }
 
-.star-header-logo {
-    width: 260px;
-    margin-bottom: 20px;
+.star-image img {
+    width: 500px;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
 footer {
@@ -122,29 +153,26 @@ footer {
     <h1>OSR — Online Star Registry</h1>
 </header>
 
-<div class="container" id="home">
-    <div class="panel">
-        <h2>Verificación de Registro Estelar</h2>
-        <p>Acceda al registro oficial introduciendo su código único.</p>
-        <a class="button" onclick="showSearch()">Acceder al buscador</a>
-    </div>
+<div id="home" class="panel">
+    <h2>Verificación de Registro Estelar</h2>
+    <p>Acceda al registro oficial introduciendo su código único.</p>
+    <a class="button" onclick="showSearch()">Acceder al buscador</a>
 </div>
 
-<div class="container" id="search" style="display:none;">
-    <div class="panel">
-        <h2>Buscador de Estrellas Registradas</h2>
-        <input type="text" id="codeInput" placeholder="Introduce tu código">
-        <button onclick="checkCode()">Buscar</button>
-        <p id="error" style="color:red;"></p>
-    </div>
+<div id="search" class="panel" style="display:none;">
+    <h2>Buscador de Estrellas Registradas</h2>
+    <input type="text" id="codeInput" placeholder="Introduce tu código">
+    <button onclick="checkCode()">Buscar</button>
+    <p id="error" style="color:red;"></p>
 </div>
 
-<div class="container" id="starPage" style="display:none;">
+<div id="starPage" style="display:none;">
+
+    <div class="star-top">
+        <img src="onlinestarregister.png">
+    </div>
+
     <div class="panel">
-
-        <!-- MISMO LOGO -->
-        <img src="onlinestarregister.png" class="star-header-logo">
-
         <div class="coordinates">
             RA 19h 24m 18.2s | Dec −25° 17′ 09″ <br>
             Constelación: Sagitario
@@ -161,7 +189,7 @@ footer {
 </div>
 
 <footer>
-    © OSR International Astronomical Registry
+    © OSR Online Star Register
 </footer>
 
 </div>
