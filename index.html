@@ -8,23 +8,22 @@
 body {
     margin: 0;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background: url("fondo-estrellas.jpg") no-repeat center center fixed;
-    background-size: cover;
+    background: radial-gradient(circle at center, #0b1a3a, #030814);
     color: white;
     text-align: center;
 }
 
-/* Marca de agua con el logo */
+/* Marca de agua del logo */
 body::before {
     content: "";
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 70%;
-    height: 70%;
+    width: 75%;
+    height: 75%;
     background: url("onlinestarregister.png") no-repeat center;
     background-size: contain;
-    opacity: 0.08;
+    opacity: 0.06;
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 0;
@@ -33,7 +32,6 @@ body::before {
 .overlay {
     position: relative;
     z-index: 1;
-    background: rgba(5, 10, 30, 0.88);
     min-height: 100vh;
     padding-bottom: 40px;
 }
@@ -41,12 +39,6 @@ body::before {
 header {
     padding: 40px 20px;
     border-bottom: 1px solid rgba(255,255,255,0.2);
-}
-
-header h1 {
-    margin: 0;
-    font-size: 40px;
-    letter-spacing: 4px;
 }
 
 .container {
@@ -95,14 +87,6 @@ button {
     margin-left: 10px;
 }
 
-.star-image {
-    margin-top: 30px;
-    border: 2px solid #ccc;
-    padding: 5px;
-    display: inline-block;
-    border-radius: 10px;
-}
-
 .star-image img {
     width: 500px;
     max-width: 100%;
@@ -117,7 +101,7 @@ button {
 }
 
 .star-header-logo {
-    width: 280px;
+    width: 260px;
     margin-bottom: 20px;
 }
 
@@ -138,7 +122,6 @@ footer {
     <h1>OSR — Online Star Registry</h1>
 </header>
 
-<!-- Página principal -->
 <div class="container" id="home">
     <div class="panel">
         <h2>Verificación de Registro Estelar</h2>
@@ -147,7 +130,6 @@ footer {
     </div>
 </div>
 
-<!-- Buscador -->
 <div class="container" id="search" style="display:none;">
     <div class="panel">
         <h2>Buscador de Estrellas Registradas</h2>
@@ -157,11 +139,10 @@ footer {
     </div>
 </div>
 
-<!-- Página de la estrella -->
 <div class="container" id="starPage" style="display:none;">
     <div class="panel">
-        
-        <!-- LOGO EN LUGAR DEL TEXTO -->
+
+        <!-- MISMO LOGO -->
         <img src="onlinestarregister.png" class="star-header-logo">
 
         <div class="coordinates">
