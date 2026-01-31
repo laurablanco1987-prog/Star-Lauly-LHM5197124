@@ -1,198 +1,181 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
-    span.s1 {font-kerning: none}
-  </style>
+<meta charset="UTF-8">
+<title>OSR - Star Registry</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: url("https://cdn.pixabay.com/photo/2016/08/03/17/13/sky-1562750_1280.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+.overlay {
+    background: rgba(5, 10, 30, 0.85);
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+header {
+    padding: 40px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+
+.container {
+    padding: 40px 20px;
+}
+
+.panel {
+    background: white;
+    color: #111;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+a.button {
+    display: inline-block;
+    padding: 15px 35px;
+    margin-top: 30px;
+    font-size: 18px;
+    background: #1b3fa0;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+input {
+    padding: 12px;
+    width: 250px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 25px;
+    border-radius: 20px;
+    border: none;
+    background: #1b3fa0;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.star-image {
+    margin-top: 30px;
+    border: 2px solid #ccc;
+    padding: 5px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.star-image img {
+    width: 500px;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.coordinates {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #003366;
+}
+
+footer {
+    margin-top: 60px;
+    padding: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    font-size: 14px;
+    opacity: 0.7;
+}
+</style>
 </head>
+
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="es"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;title&gt;OSR - Star Registry&lt;/title&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;style&gt;</span></p>
-<p class="p1"><span class="s1">body {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: url("https://cdn.pixabay.com/photo/2016/08/03/17/13/sky-1562750_1280.jpg") no-repeat center center fixed;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background-size: cover;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: white;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-align: center;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">.overlay {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: rgba(5, 10, 30, 0.85);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>min-height: 100vh;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding-bottom: 40px;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">header {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 40px 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-bottom: 1px solid rgba(255,255,255,0.2);</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">header h1 {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 40px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>letter-spacing: 4px;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">.container {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 40px 20px;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">.panel {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: white;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: #111;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>max-width: 800px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin: 40px auto;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 30px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 12px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>box-shadow: 0 10px 40px rgba(0,0,0,0.6);</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">a.button {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display: inline-block;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 15px 35px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-top: 30px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 18px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: #1b3fa0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: white;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-decoration: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 30px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>cursor: pointer;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">input {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 12px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: 250px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border: 1px solid #ccc;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 16px;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">button {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 12px 25px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: #1b3fa0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: white;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 16px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>cursor: pointer;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-left: 10px;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">.star-image {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-top: 30px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border: 2px solid #ccc;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 5px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display: inline-block;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 10px;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">.star-image img {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: 500px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>max-width: 100%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 8px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>box-shadow: 0 0 15px rgba(0,0,0,0.5);</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">.coordinates {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 18px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-top: 15px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color: #003366;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">footer {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-top: 60px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-top: 1px solid rgba(255,255,255,0.2);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size: 14px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>opacity: 0.7;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;div class="overlay"&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;header&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h1&gt;OSR — Online Star Registry&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/header&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;!-- Página principal --&gt;</span></p>
-<p class="p1"><span class="s1">&lt;div class="container" id="home"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="panel"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Verificación de Registro Estelar&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Acceda al registro oficial introduciendo su código único.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a class="button" onclick="showSearch()"&gt;Acceder al buscador&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;!-- Buscador --&gt;</span></p>
-<p class="p1"><span class="s1">&lt;div class="container" id="search" style="display:none;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="panel"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Buscador de Estrellas Registradas&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="codeInput" placeholder="Introduce tu código"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button onclick="checkCode()"&gt;Buscar&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p id="error" style="color:red;"&gt;&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;!-- Página de la estrella --&gt;</span></p>
-<p class="p1"><span class="s1">&lt;div class="container" id="starPage" style="display:none;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="panel"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2&gt;STAR LAULY&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="coordinates"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>RA 19h 24m 18.2s | Dec −25° 17′ 09″ &lt;br&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>Constelación: Sagitario</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="star-image"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- Imagen actualizada a PNG --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;img src="estrella.png" alt="Estrella"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p style="margin-top:25px; line-height:1.6;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>Bienvenida a esta página especial donde está registrada la estrella Lauly a nombre de Lydia Mª Ropero Jiménez, y registrada por Laura Blanco Pérez en la Constelación Sagitario el día 14 de febrero de 2026 con motivo de la celebración especial del día de San Valentín.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;footer&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>© OSR International Astronomical Registry</span></p>
-<p class="p1"><span class="s1">&lt;/footer&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;script&gt;</span></p>
-<p class="p1"><span class="s1">function showSearch() {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>document.getElementById("home").style.display = "none";</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>document.getElementById("search").style.display = "block";</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">function checkCode() {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const code = document.getElementById("codeInput").value.trim();</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>if(code === "LHM5197124") {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.getElementById("search").style.display = "none";</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.getElementById("starPage").style.display = "block";</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>} else {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.getElementById("error").textContent = "Código no válido.";</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">&lt;/script&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+<div class="overlay">
+
+<header>
+    <h1>OSR — Online Star Registry</h1>
+</header>
+
+<!-- Página principal -->
+<div class="container" id="home">
+    <div class="panel">
+        <h2>Verificación de Registro Estelar</h2>
+        <p>Acceda al registro oficial introduciendo su código único.</p>
+        <a class="button" onclick="showSearch()">Acceder al buscador</a>
+    </div>
+</div>
+
+<!-- Buscador -->
+<div class="container" id="search" style="display:none;">
+    <div class="panel">
+        <h2>Buscador de Estrellas Registradas</h2>
+        <input type="text" id="codeInput" placeholder="Introduce tu código">
+        <button onclick="checkCode()">Buscar</button>
+        <p id="error" style="color:red;"></p>
+    </div>
+</div>
+
+<!-- Página de la estrella -->
+<div class="container" id="starPage" style="display:none;">
+    <div class="panel">
+        <h2>STAR LAULY</h2>
+        <div class="coordinates">
+            RA 19h 24m 18.2s | Dec −25° 17′ 09″ <br>
+            Constelación: Sagitario
+        </div>
+
+        <div class="star-image">
+            <!-- Imagen actualizada a PNG -->
+            <img src="estrella.png" alt="Estrella">
+        </div>
+
+        <p style="margin-top:25px; line-height:1.6;">
+            Bienvenida a esta página especial donde está registrada la estrella Lauly a nombre de Lydia Mª Ropero Jiménez, y registrada por Laura Blanco Pérez en la Constelación Sagitario el día 14 de febrero de 2026 con motivo de la celebración especial del día de San Valentín.
+        </p>
+    </div>
+</div>
+
+<footer>
+    © OSR International Astronomical Registry
+</footer>
+
+</div>
+
+<script>
+function showSearch() {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("search").style.display = "block";
+}
+
+function checkCode() {
+    const code = document.getElementById("codeInput").value.trim();
+    if(code === "LHM5197124") {
+        document.getElementById("search").style.display = "none";
+        document.getElementById("starPage").style.display = "block";
+    } else {
+        document.getElementById("error").textContent = "Código no válido.";
+    }
+}
+</script>
+
 </body>
 </html>
